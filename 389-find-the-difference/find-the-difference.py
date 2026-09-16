@@ -5,12 +5,11 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        di={}
+        result=0
 
-        for i in range(len(s)):
-            di[s[i]]=di.get(s[i],0)+1
-        for j in t:
-            if j not in di or di[j]==0:
-                return j
-            di[j]-=1 
-            
+        for char in s:
+            result^=ord(char)
+        for char in t:
+            result^=ord(char)
+        
+        return chr(result)
