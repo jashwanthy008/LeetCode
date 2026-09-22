@@ -4,10 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        non_zeros=[num for num in nums if num!=0]
-        zero=len(nums)-len(non_zeros)
-        result=non_zeros+[0]*zero
-
-        for i in range(len(nums)):
-            nums[i]=result[i]
-            
+        i=0
+        for j in range(len(nums)):
+            if nums[j]!=0:
+                nums[j],nums[i]=nums[i],nums[j]
+                i+=1
