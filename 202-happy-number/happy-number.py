@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         sett=set()
-
         while n!=1:
             if n in sett:
                 return False
