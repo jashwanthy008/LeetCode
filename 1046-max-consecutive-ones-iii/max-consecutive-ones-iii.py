@@ -8,8 +8,7 @@ class Solution(object):
         left=0
         zerocount=0
         max_count=0
-
-
+                
         for right in range(len(nums)):
             if nums[right]==0:
                 zerocount+=1
@@ -18,5 +17,4 @@ class Solution(object):
                     zerocount-=1
                 left+=1
             max_count=max(max_count,right-left+1)
-        return max_count
-                
+        return max_count 
