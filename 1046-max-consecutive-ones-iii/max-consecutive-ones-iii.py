@@ -6,15 +6,17 @@ class Solution(object):
         :rtype: int
         """
         left=0
-        zerocout=0
-        max_size=0
+        zerocount=0
+        max_count=0
+
 
         for right in range(len(nums)):
             if nums[right]==0:
-                zerocout+=1
-            while zerocout>k:
+                zerocount+=1
+            while zerocount>k:
                 if nums[left]==0:
-                    zerocout-=1
+                    zerocount-=1
                 left+=1
-            max_size=max(max_size,right - left +1)
-        return max_size
+            max_count=max(max_count,right-left+1)
+        return max_count
+                
