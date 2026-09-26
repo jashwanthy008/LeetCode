@@ -23,8 +23,13 @@ class Solution(object):
                     closest_sum=current_sum
                 
                 if current_sum<target:
+
                     j+=1
+                    while j<k and nums[j]==nums[j-1]:
+                        j+=1
                 else:
                     k-=1
+                    while j<k and nums[k]==nums[k+1]:
+                        k-=1
         return closest_sum
                     
