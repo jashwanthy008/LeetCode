@@ -6,14 +6,14 @@ class Solution(object):
         :rtype: int
         """
         left=0
-        zerocount=0
+        zero_cout=0
 
         for right in range(len(nums)):
             if nums[right]==0:
-                zerocount+=1
-            if zerocount>k:
+                zero_cout+=1
+            
+            if zero_cout>k:
                 if nums[left]==0:
-                    zerocount-=1
+                    zero_cout-=1
                 left+=1
         return len(nums)-left
-
